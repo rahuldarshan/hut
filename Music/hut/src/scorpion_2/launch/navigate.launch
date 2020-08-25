@@ -1,0 +1,18 @@
+<launch>
+    <!-- Map server -->
+    <arg name="map_file" default="$(find scorpion_2)/maps/gazebo_map.yaml"/>
+    <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)" />
+
+    <!-- AMCL used for localization --> 
+    <include file="$(find scorpion_2)/launch/include/amcl_demo.launch" />
+
+    <!--Robot pose ekf for localization>
+    <include file="$(find scorpion_2)/launch/include/localize.launch" /-->
+    
+    <!-- send goals node -->
+    <node name="send_goals_node" pkg="scorpion_2" type="send_goals.py" output="screen">
+    </node>
+
+    <!-- Calls navigation stack packages for robot base >
+ <include file="$(find scorpion_2)/launch/include/move_base/move_base.launch" /-->
+</launch>

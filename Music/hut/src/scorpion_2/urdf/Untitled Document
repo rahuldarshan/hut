@@ -1,0 +1,56 @@
+<joint
+    name="j_laser"
+    type="fixed">
+    <origin
+      xyz="0.262 -0.08775 0.2276"
+      rpy="1.38777878078145E-15 0 1.5707963267949" />
+    <parent
+      link="base_link" />  11.682371523014
+    <child
+      link="laser" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+
+<link
+    name="laser">
+    <inertial>
+      <origin
+        xyz="-0.00749091569179072 -9.23310527668475E-05 0.0106951585551625"
+        rpy="0 0 0" />
+      <mass
+        value="1.32958175905392" />
+      <inertia
+        ixx="0.000613168628768847"
+        ixy="-9.62342860871377E-07"
+        ixz="0.000157943109564161"
+        iyy="0.000958139084852657"
+        iyz="-3.10794087225904E-06"
+        izz="0.00109604182455394" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jrscor/meshes/laser.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://jrscor/meshes/laser.STL" />
+      </geometry>
+    </collision>
+  </link>
+

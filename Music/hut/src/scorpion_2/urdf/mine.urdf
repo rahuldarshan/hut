@@ -1,0 +1,684 @@
+<robot
+  name="body_urdf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.000811625985164446 -8.00469033645779E-05 0.109573768136233"
+        rpy="0 0 0" />
+      <mass
+        value="11.5534439194818" />
+      <inertia
+        ixx="0.356057891446924"
+        ixy="-0.000199457821020869"
+        ixz="0.000778002042019737"
+        iyy="0.672454319833893"
+        iyz="0.000141428841512853"
+        izz="0.814260168755902" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="l_f_d">
+    <inertial>
+      <origin
+        xyz="8.32667268468867E-17 0.153185137732946 4.16333634234434E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.801747641535325" />
+      <inertia
+        ixx="0.00210844915709914"
+        ixy="8.49814091014533E-19"
+        ixz="-2.57751175238013E-19"
+        iyy="0.00251842148758314"
+        iyz="5.23690831119044E-19"
+        izz="0.00210844915709915" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/l_f_d.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/l_f_d.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_l_f_d"
+    type="continuous">
+    <origin
+      xyz="0.2675 0.104 -0.00999999999999998"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l_f_d" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l_b_d">
+    <inertial>
+      <origin
+        xyz="1.11022302462516E-16 0.153185137732946 1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.801747641535326" />
+      <inertia
+        ixx="0.00210844915709915"
+        ixy="-7.13656164859178E-19"
+        ixz="4.44292924169009E-19"
+        iyy="0.00251842148758314"
+        iyz="-1.94472423180258E-19"
+        izz="0.00210844915709915" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/l_b_d.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/l_b_d.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_l_b_d"
+    type="continuous">
+    <origin
+      xyz="-0.2675 0.104 -0.0100000000000001"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l_b_d" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r_f_d">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 -0.153185137732946 -1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.801747641535325" />
+      <inertia
+        ixx="0.00210844915709914"
+        ixy="-3.59611647866962E-19"
+        ixz="9.17717307742805E-19"
+        iyy="0.00251842148758314"
+        iyz="8.53989153604845E-19"
+        izz="0.00210844915709914" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/r_f_d.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/r_f_d.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_r_f_d"
+    type="continuous">
+    <origin
+      xyz="0.2675 -0.104 -0.01"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r_f_d" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r_b_d">
+    <inertial>
+      <origin
+        xyz="-5.55111512312578E-17 -0.153185137732946 -1.38777878078145E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.801747641535325" />
+      <inertia
+        ixx="0.00210844915709914"
+        ixy="-5.95332149716731E-20"
+        ixz="3.279520712767E-19"
+        iyy="0.00251842148758314"
+        iyz="1.13011785291075E-18"
+        izz="0.00210844915709915" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/r_b_d.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/r_b_d.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_r_b_d"
+    type="continuous">
+    <origin
+      xyz="-0.2675 -0.104 -0.0100000000000001"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r_b_d" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l_f_f">
+    <inertial>
+      <origin
+        xyz="0.198593234189923 0.0589999999860986 0.000286235157620121"
+        rpy="0 0 0" />
+      <mass
+        value="2.40960845389308" />
+      <inertia
+        ixx="0.0109103627283877"
+        ixy="7.65833416470913E-12"
+        ixz="-0.000101752235396199"
+        iyy="0.0714152291218338"
+        iyz="-1.56129676892236E-15"
+        izz="0.0657123181458154" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/l_f_f.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/l_f_f.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_l_f_f"
+    type="continuous">
+    <origin
+      xyz="0.2675 0.204999999999995 -0.00999999999999998"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l_f_f" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="l_b_f">
+    <inertial>
+      <origin
+        xyz="0.198600102175386 0.0589999999860981 0.000198675702895099"
+        rpy="0 0 0" />
+      <mass
+        value="2.40960845389308" />
+      <inertia
+        ixx="0.010909568774612"
+        ixy="5.90482300581818E-12"
+        ixz="-7.85930666941814E-05"
+        iyy="0.0714209773304485"
+        iyz="-1.74293825129112E-12"
+        izz="0.0657188603082058" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/l_b_f.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/l_b_f.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_l_b_f"
+    type="continuous">
+    <origin
+      xyz="-0.2675 0.205 -0.00999999999999887"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l_b_f" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r_f_f">
+    <inertial>
+      <origin
+        xyz="0.19859345574051 -0.0590000000139018 0.000241492251173855"
+        rpy="0 0 0" />
+      <mass
+        value="2.40960845389308" />
+      <inertia
+        ixx="0.0109102863969712"
+        ixy="7.6158904340516E-12"
+        ixz="-8.97682273025575E-05"
+        iyy="0.0714153670603396"
+        iyz="-3.7527279928585E-13"
+        izz="0.0657125324157377" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/r_f_f.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/r_f_f.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_r_f_f"
+    type="continuous">
+    <origin
+      xyz="0.2675 -0.205 -0.00999999999999997"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r_f_f" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="r_b_f">
+    <inertial>
+      <origin
+        xyz="0.198600172683891 -0.0590000000139018 0.000100710575286808"
+        rpy="0 0 0" />
+      <mass
+        value="2.40960845389308" />
+      <inertia
+        ixx="0.010909504574335"
+        ixy="5.90482714308758E-12"
+        ixz="-5.15571547888919E-05"
+        iyy="0.0714209744980031"
+        iyz="-1.74585323697782E-12"
+        izz="0.0657189216760374" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/r_b_f.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/r_b_f.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_r_b_f"
+    type="continuous">
+    <origin
+      xyz="-0.267499999999999 -0.205 -0.0100000000000005"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r_b_f" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+
+
+  <link
+    name="lidar">
+    <inertial>
+      <origin
+        xyz="9.23310527669308E-05 -0.00749091569179067 0.0106951585551624"
+        rpy="0 0 0" />
+      <mass
+        value="1.32958175905392" />
+      <inertia
+        ixx="0.000958139084852655"
+        ixy="9.62342860870728E-07"
+        ixz="3.10794087225972E-06"
+        iyy="0.000613168628768846"
+        iyz="0.00015794310956416"
+        izz="0.00109604182455394" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_lidar"
+    type="fixed">
+    <origin
+      xyz="0.2145 0.01425 0.2896"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="kinect">
+    <inertial>
+      <origin
+        xyz="9.54196081107694E-05 0.00147972674672773 -0.00162110995170492"
+        rpy="0 0 0" />
+      <mass
+        value="0.778191352387036" />
+      <inertia
+        ixx="0.000894917915627087"
+        ixy="-2.48904008731184E-06"
+        ixz="3.16249827238313E-06"
+        iyy="0.00348090172043116"
+        iyz="-1.3418367316956E-05"
+        izz="0.00306324942218616" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/kinect.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/kinect.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_kinect"
+    type="fixed">
+    <origin
+      xyz="0.110028093668129 0.000138403787494051 0.3295"
+      rpy="3.14159265358979 0 1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="kinect" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="camera">
+    <inertial>
+      <origin
+        xyz="0 -2.77555756156289E-17 -0.0145709174924016"
+        rpy="0 0 0" />
+      <mass
+        value="0.0798315520855229" />
+      <inertia
+        ixx="0.000128647654709387"
+        ixy="-3.31162752579137E-11"
+        ixz="2.62450160273201E-20"
+        iyy="0.000129825692728806"
+        iyz="1.06156716902792E-20"
+        izz="1.81282517605815E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/camera.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://scorpionrobot/urdf/meshes/camera.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j_camera"
+    type="fixed">
+    <origin
+      xyz="0.0274999999999999 0 0.393463962654318"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="camera" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+<gazebo>
+  <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
+    <updateRate>100.0</updateRate>
+    <robotNamespace>/</robotNamespace>
+    <leftFrontJoint>j_l_f_d</leftFrontJoint>
+    <rightFrontJoint>j_r_f_d</rightFrontJoint>
+    <leftRearJoint>j_l_b_d</leftRearJoint>
+    <rightRearJoint>j_r_b_d</rightRearJoint>
+    <wheelSeparation>0.5</wheelSeparation>
+    <wheelDiameter>0.14</wheelDiameter>
+    <robotBaseFrame>base_link</robotBaseFrame>
+    <torque>20</torque>
+    <topicName>cmd_vel</topicName>
+    <broadcastTF>false</broadcastTF>
+  </plugin>
+</gazebo>
+
+
+<!-- hokuyo -->
+  <gazebo reference="laser">
+    <sensor type="gpu_ray" name="head_hokuyo_sensor">
+      <pose>0 0 0 0 0 0</pose>
+      <visualize>true</visualize>
+      <update_rate>40</update_rate>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>720</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.5708</min_angle>
+            <max_angle>1.5708</max_angle>
+          </horizontal>
+        </scan>
+        <range>
+          <min>0.10</min>
+          <max>30.0</max>
+          <resolution>0.01</resolution>
+        </range>
+        <noise>
+          <type>gaussian</type>
+          <!-- Noise parameters based on published spec for Hokuyo laser
+               achieving "+-30mm" accuracy at range < 10m.  A mean of 0.0m and
+               stddev of 0.01m will put 99.7% of samples within 0.03m of the true
+               reading. -->
+          <mean>0.0</mean>
+          <stddev>0.01</stddev>
+        </noise>
+      </ray>
+      <plugin name="gazebo_ros_head_hokuyo_controller" filename="libgazebo_ros_gpu_laser.so">
+        <topicName>/scan</topicName>
+        <frameName>lidar</frameName>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+</robot>

@@ -1,0 +1,33 @@
+<launch>
+  <include
+    file="$(find gazebo_ros)/launch/empty_world.launch"/>
+  <node
+    name="tf_footprint_base"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_link base_footprint 40" />
+  <node
+    name="tf_laser_laser"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 hokuyo_link laser 40" />
+
+  <node pkg="tf" type="static_transform_publisher" name="map_scanmatcher_broadcaster" args="0 0 0 0 0 0 map base_link 5"/>
+  <node
+    name="spawn_model"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="-file $(find scorpion_2)/urdf/scorpion_2.urdf -urdf -model scorpion_2"
+    output="screen" />
+  <node
+    name="fake_joint_calibration"
+    pkg="rostopic"
+    type="rostopic"
+    args="pub /calibrated std_msgs/Bool true" />
+
+<node pkg="laser_filters" type="scan_to_scan_filter_chain" name="laser_filter">
+    <rosparam command="load" file="$(find scorpion_2)/param/box_filter.yaml"/>
+</node>
+
+
+</launch>
